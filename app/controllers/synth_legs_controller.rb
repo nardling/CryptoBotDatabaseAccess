@@ -1,0 +1,2 @@
+class SynthLegsController < ApplicationController
+end

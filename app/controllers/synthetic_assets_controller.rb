@@ -1,0 +1,2 @@
+class SyntheticAssetsController < ApplicationController
+end
