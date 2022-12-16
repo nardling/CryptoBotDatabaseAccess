@@ -14,4 +14,9 @@ Rails.application.routes.draw do
   get '/followedAssets/:uid', to: 'followed_assets#getAssetsForUser'
   get '/allExchAssets', to: 'exch_assets#getAllAssets'
 
+  post '/addFollowedAsset/', to: 'followed_assets#addNew'
+  post '/removeFollowedAsset/', to: 'followed_assets#remove'
+
+  post '/createSynthAsset/', to: 'synthetic_assets#addNew'
+
 end
