@@ -18,5 +18,5 @@ Rails.application.routes.draw do
   post '/removeFollowedAsset/', to: 'followed_assets#remove'
 
   post '/createSynthAsset/', to: 'synthetic_assets#addNew'
-
+  get '/syntheticAssets/:uid', to: 'synthetic_assets#getForUser'
 end

@@ -9,6 +9,11 @@ class SyntheticAssetsController < ApplicationController
         end
     end
 
+    def getForUser
+        synthAssets = SyntheticAsset.where(user_id: params[:uid])
+        render json: synthAssets, include: [:synth_legs, :exch_assets, :exch_assets.exchange]
+    end
+
     private
     # def synthetic_leg
     #     params.require(:synthetic_leg).permit(:exch_asset_id, :weight)
