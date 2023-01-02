@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_13_194902) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_29_181226) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -36,6 +36,23 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_13_194902) do
     t.datetime "updated_at", null: false
     t.index ["exch_asset_id"], name: "index_followed_assets_on_exch_asset_id"
     t.index ["user_id"], name: "index_followed_assets_on_user_id"
+  end
+
+  create_table "strategies", force: :cascade do |t|
+    t.string "target"
+    t.string "condition"
+    t.float "value"
+    t.string "action"
+    t.float "max_exposure"
+    t.float "max_trade_notional"
+    t.integer "time_delay"
+    t.bigint "user_id"
+    t.bigint "synthetic_asset_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "strategy_name"
+    t.index ["synthetic_asset_id"], name: "index_strategies_on_synthetic_asset_id"
+    t.index ["user_id"], name: "index_strategies_on_user_id"
   end
 
   create_table "synth_legs", force: :cascade do |t|

@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  target: MyString
+  condition: MyString
+  value: MyString
+  action: MyString
+  max_exposure: MyString
+  max_trade_notional: MyString
+  time_delay: MyString
+
+two:
+  target: MyString
+  condition: MyString
+  value: MyString
+  action: MyString
+  max_exposure: MyString
+  max_trade_notional: MyString
+  time_delay: MyString

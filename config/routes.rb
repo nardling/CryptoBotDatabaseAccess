@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :strategies
+  # resources :strategies
+  # resources :strategies
   # resources :followed_assets
   # resources :synth_legs
   # resources :exch_assets
@@ -18,5 +21,11 @@ Rails.application.routes.draw do
   post '/removeFollowedAsset/', to: 'followed_assets#remove'
 
   post '/createSynthAsset/', to: 'synthetic_assets#addNew'
+  post '/removeSynthAsset/', to: 'synthetic_assets#remove' 
+
   get '/syntheticAssets/:uid', to: 'synthetic_assets#getForUser'
+  get '/syntheticLegs/:assetId', to: 'synthetic_assets#getLegsForAsset'
+
+  post '/createStrategy/', to: 'strategies#addNew'
+  get '/getStrategiesForUser/:user_id', to: 'strategies#getStrategiesForUser'
 end

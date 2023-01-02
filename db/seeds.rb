@@ -28,3 +28,7 @@
 # done 12-15
 # fa1 = FollowedAsset.create(user_id: 1, exch_asset_id: 1)
 # fa2 = FollowedAsset.create(user_id: 1, exch_asset_id: 2)
+
+btc_b = ExchAsset.create(exchange_id: 3, symbol: "BTC Spot", descr: "btcusd")
+eth_b = ExchAsset.create(exchange_id: 3, symbol: "ETH Spot", descr: "ethusd")
+sol_b = ExchAsset.create(exchange_id: 3, symbol: "SOL Spot", descr: "solusd")
