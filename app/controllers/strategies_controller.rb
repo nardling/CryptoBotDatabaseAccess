@@ -10,7 +10,7 @@ class StrategiesController < ApplicationController
     end
 
     def getStrategiesForUser
-        sql = "select s.strategy_name, s.target, s.condition, s.value, s.action,
+        sql = "select s.id, s.strategy_name, s.target, s.condition, s.value, s.action,
         s.max_exposure, s.max_trade_notional, s.time_delay, a.descr as synth_asset_name
         from strategies s INNER JOIN synthetic_assets a on a.id = s.synthetic_asset_id
         where s.user_id = " + params[:user_id]
