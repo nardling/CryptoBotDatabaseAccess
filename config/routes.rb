@@ -28,4 +28,6 @@ Rails.application.routes.draw do
 
   post '/createStrategy/', to: 'strategies#addNew'
   get '/getStrategiesForUser/:user_id', to: 'strategies#getStrategiesForUser'
+  post '/updateStrategyThreshold/', to: 'strategies#updateStrategyThreshold'
+  post '/removeStrategy/', to: 'strategies#removeStrategy'
 end

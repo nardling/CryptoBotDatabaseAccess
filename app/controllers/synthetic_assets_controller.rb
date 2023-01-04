@@ -27,6 +27,7 @@ class SyntheticAssetsController < ApplicationController
     def remove
         nf = SyntheticAsset.find_by(id: params[:assetId])
         nf.destroy()
+        render json: {}, status: :ok
     end
 
     private
